@@ -23,7 +23,7 @@ interface Project {
 
 const ongoingProjects: Project[] = [
   {
-    title: "E-Commerce - Next",
+    title: "Shop By Dante - Next",
     image: "/placeholder.svg",
     description: "A responsive full stack e-commerce web application.",
     stacks: ["Next.js", "React", "Redux", "MongoDB"],
@@ -32,19 +32,19 @@ const ongoingProjects: Project[] = [
   },
   {
     title: "Joki By Dante - Next",
-    image: "/placeholder.svg",
+    image: "/port1.png",
     description:
       "A web based management system for Mobile Legends boosting service.",
     stacks: ["Next.js", "React", "Zustand", "PostgreSQL"],
     demoUrl: "#",
-    sourceUrl: "#",
+    sourceUrl: "https://github.com/zaydant/jokibydante",
   },
 ]
 
 const finishedProjects: Project[] = [
   {
     title: "Minimal Portfolio - Next",
-    image: "/portfolio.png",
+    image: "/ssport.png",
     description:
       "This is what you're currently viewing, a portfolio made simple.",
     stacks: ["Next.js", "React", "shadcn"],
