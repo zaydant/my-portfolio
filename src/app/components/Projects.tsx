@@ -32,11 +32,11 @@ const ongoingProjects: Project[] = [
   },
   {
     title: "Joki By Dante - Next",
-    image: "/port1.png",
+    image: "/port2.png",
     description:
       "A web based management system for Mobile Legends boosting service.",
-    stacks: ["Next.js", "React", "Zustand", "PostgreSQL"],
-    demoUrl: "#",
+    stacks: ["Next.js", "React", "Zustand", "shadcn", "PostgreSQL"],
+    demoUrl: "https://jokibydante.vercel.app/",
     sourceUrl: "https://github.com/zaydant/jokibydante",
   },
 ]
