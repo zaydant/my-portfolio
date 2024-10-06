@@ -17,7 +17,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Button variant="outline" size="lg" asChild>
-            <Link href="https://github.com/zaydant" className="flex items-center" rel="noopener noreferrer" target="_blank">
+            <Link href="https://drive.google.com/file/d/1s0ALoVGPg0zVNQmJf7r4bfs2Q37ku7DY/view?usp=sharing" className="flex items-center" rel="noopener noreferrer" target="_blank">
               <FileText className="mr-2 h-5 w-5" />
               Resume
             </Link>

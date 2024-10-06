@@ -1,5 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
-import React from "react"
+'use client'
+
 import Image from "next/image"
 import {
   Card,
@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Toaster } from "@/components/ui/toaster"
+import { useToast } from "@/hooks/use-toast"
 
 interface Project {
   title: string
@@ -49,7 +51,7 @@ const finishedProjects: Project[] = [
       "This is what you're currently viewing, a portfolio made simple.",
     stacks: ["Next.js", "React", "shadcn"],
     demoUrl: "#",
-    sourceUrl: "#",
+    sourceUrl: "https://github.com/zaydant/my-portfolio",
   },
   {
     title: "FIN.IT - Mobile",
@@ -72,6 +74,20 @@ const finishedProjects: Project[] = [
 ]
 
 function ProjectCard({ project }: { project: Project }) {
+  const { toast } = useToast()
+
+  const handleButtonClick = (url: string, type: 'demo' | 'source') => {
+    if (url === '#') {
+      toast({
+        title: "Not Available",
+        description: `The ${type === 'demo' ? 'live demo' : 'source code'} for this project is not available yet.`,
+        duration: 3000,
+      })
+    } else {
+      window.open(url, '_blank', 'noopener,noreferrer')
+    }
+  }
+
   return (
     <Card className="flex flex-col transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl">
       <CardHeader className="overflow-hidden">
@@ -98,11 +114,19 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
         <div className="flex gap-2 w-full">
-          <Button variant="default" className="flex-1 transition-colors duration-300 ease-in-out hover:bg-primary-dark" asChild>
-            <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <Button 
+            variant="default" 
+            className="flex-1 transition-colors duration-300 ease-in-out hover:bg-primary-dark"
+            onClick={() => handleButtonClick(project.demoUrl || '#', 'demo')}
+          >
+            Live Demo
           </Button>
-          <Button variant="outline" className="flex-1 transition-colors duration-300 ease-in-out hover:bg-secondary hover:text-secondary-foreground" asChild>
-            <a href={project.sourceUrl} target="_blank" rel="noopener noreferrer">Source Code</a>
+          <Button 
+            variant="outline" 
+            className="flex-1 transition-colors duration-300 ease-in-out hover:bg-secondary hover:text-secondary-foreground"
+            onClick={() => handleButtonClick(project.sourceUrl || '#', 'source')}
+          >
+            Source Code
           </Button>
         </div>
       </CardFooter>
@@ -115,7 +139,7 @@ function Projects() {
     <section className="min-h-screen container mx-auto px-4 py-16" id="projects">
       <h2 className="text-4xl font-bold mb-4">Projects</h2>
       <p className="text-gray-600 mb-8">
-        I'm currently working on these projects:
+        I&apos;m currently working on these projects:
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-12">
         {ongoingProjects.map((project, index) => (
@@ -128,6 +152,7 @@ function Projects() {
           <ProjectCard key={index} project={project} />
         ))}
       </div>
+      <Toaster />
     </section>
   )
 }
