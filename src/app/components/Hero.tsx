@@ -8,16 +8,16 @@ export default function Hero() {
   return (
     <section className="container mx-auto px-4 py-16 flex flex-col-reverse md:flex-row items-center min-h-screen">
       <div className="md:w-2/3 md:pr-8 mb-8 md:mb-0">
-        <h1 className="text-4xl font-bold mb-4">Hello! I'm Zaydan, a developer based in Indonesia.</h1>
+        <h1 className="text-4xl font-bold mb-4">Hello! I'm Zaydan, a Front End Developer</h1>
         <p className="text-gray-600 mb-6">
-          I'm a final year Informatics student at President University. Passionate in front end development of websites using Next, React, JavaScript, and TypeScript as well as mobile development using Flutter.
+          I'm an Informatics graduate from President University who is passionate in front end development of websites using Next, React, JavaScript, and TypeScript as well as mobile development using Flutter.
         </p>
         <p className="text-gray-600 mb-6">
-          I'm eager to learn more about front-end development in a professional environment. Currently seeking for a role as a front end developer.
+          I'm eager to utilize my skills and learn more about front-end development in a professional environment. Currently seeking for a role as a front end developer.
         </p>
         <div className="flex flex-wrap gap-4">
           <Button variant="outline" size="lg" asChild>
-            <Link href="https://drive.google.com/file/d/1s0ALoVGPg0zVNQmJf7r4bfs2Q37ku7DY/view?usp=sharing" className="flex items-center" rel="noopener noreferrer" target="_blank">
+            <Link href="https://drive.google.com/file/d/1JGCvvwDfvJOW1dcm8WXYFqTPI7osFB5G/view?usp=sharing" className="flex items-center" rel="noopener noreferrer" target="_blank">
               <FileText className="mr-2 h-5 w-5" />
               Resume
             </Link>
