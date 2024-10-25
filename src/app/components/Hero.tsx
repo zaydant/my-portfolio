@@ -10,10 +10,10 @@ export default function Hero() {
       <div className="md:w-2/3 md:pr-8 mb-8 md:mb-0">
         <h1 className="text-4xl font-bold mb-4">Hello! I'm Zaydan, a Web Developer</h1>
         <p className="text-gray-600 mb-6">
-          I'm an Informatics graduate from President University who is passionate in Web development of websites using Next, React, JavaScript, and TypeScript as well as mobile development using Flutter.
+          I'm an Informatics graduate from President University who is passionate in development of websites using mainly Next.js and React.js as well as mobile development using Flutter.
         </p>
         <p className="text-gray-600 mb-6">
-          I'm eager to utilize my skills and learn more about front-end development in a professional environment. Currently seeking for a role as a front end developer.
+          I'm eager to utilize my skills and learn more about front-end development in a professional environment. Currently seeking for a role as a web developer.
         </p>
         <div className="flex flex-wrap gap-4">
           <Button variant="outline" size="lg" asChild>
