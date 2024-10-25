@@ -4,11 +4,13 @@ export default function Stack() {
   const techStacks = [
     { name: 'HTML', image: '/html.png' },
     { name: 'JavaScript', image: '/js.png' },
-    { name: 'Tailwind', image: '/tailwind.png' },
+    { name: 'TypeScript', image: '/typescript.png' },
+    { name: 'PHP', image: '/php.png' },
     { name: 'React', image: '/react.png' },
     { name: 'Next.js', image: '/next.png' },
+    { name: 'Node.js', image: '/node.png' },
     { name: 'Laravel', image: '/laravel.png' },
-    { name: 'TypeScript', image: '/typescript.png' },
+    { name: 'Tailwind', image: '/tailwind.png' },
     { name: 'Flutter', image: '/flutter.png' },
   ]
   return (
